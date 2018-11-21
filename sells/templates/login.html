@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+   <link rel="stylesheet" href={% static '/css/login.css' %}>
+</head>
+<body>
+    <div class="login">
+    <h2 align="center">账号密码登录</h2>
+        <form action="" method="post"  enctype="multipart/form-data">
+        
+           <div class="forms">
+                {% csrf_token %}
+                {{uf.as_p}}
+           </div>
+            <div class="btn">
+                <div>
+                    <a href="changepwd/"> 忘记密码?&nbsp; </a>
+                    <a href="changepwd/"> &nbsp;&nbsp;修改密码 &nbsp;</a>
+                    <button type ='submit'>登录</button>
+                    <button >注册</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
