@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>弍货</title>
+    <meta http-equiv="erhuo" content="IE=edge, chrome=1">
+    
+    <link rel="stylesheet" href="../static/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="../static/css/common-less(1).css" type="text/css" />
+    <link rel="stylesheet" href="../static/css/moco.min.css" type="text/css" />
+    <link rel="stylesheet" href="../static/css/common-less.css" type="text/css" />
+    <link rel="stylesheet" href="../static/css/profile-less.css" type="text/css" />
+    <style type="text/css">
+        body {background-image:url(../static/img/background.jpg); background-position:center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size:cover;
+    }
+        </style>
+
+</head>
+
+<body>
+<div id="main">
+
+    <div class="page-settings">
+        <div class="top">
+            <div class="w960 mauto top_title">
+                <p>个人信息</p>
+
+            </div>
+        </div>
+        <div class="setting pb10">
+            <div class="nav-tabs pa">
+                <a href="Scond.html" class="baseinfo fl">信息显示</a>
+                <a href="Personal.html" class="countinfo fl active">信息设置</a>
+                <div class="cb"></div>
+            </div>
+            <div class="contentBox">
+                <div class="formBox">
+                    <div id="setting-profile" class="setting-wrap setting-profile">
+
+                        <div class="wlfg-wrap clearfix ">
+                            <label class="label-name" for="job">头像：</label>
+                            <div class="rlf-group">
+                                <img class="fl avator-img" id="js-portrait" src="https://b-ssl.duitang.com/uploads/item/201607/21/20160721183004_xkjza.jpeg" width="180" height="180">
+                                <div class="fl ml20 pr">
+                                    <div id="avator-btns" class="avator-btn-inner">
+
+                                        <div class="avator-btn-wrap">
+                                            <form target="uploadtarget" action="postpic" method="post" enctype="multipart/form-data">
+                                                <a href="javascript:void(0)" hidefocus="true" class="avator-btn-fake">上传头像</a>
+                                                <input class="hide" type="file" title="上传头像" name="fileField" id="upload" accept="image/*">
+                                                <input class="hide" type="hidden" name="type" value="1">
+                                            </form>
+                                            <iframe src="about:blank" id="uploadtarget" name="uploadtarget" frameborder="0" style="display:none;"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cb"></div>
+                                <p class="rlf-tip-wrap errorHint color-red" ></p>
+                            </div>
+                        </div>
+
+                        <form id="profile" >
+
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="nick" >昵称：</label>
+                                <div class="rlf-group">
+                                    <input type="text" name="nickname" id="nick"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="请输入昵称"/>
+                                    <p class="rlf-tip-wrap errorHint color-red" ></p>
+                                </div>
+                            </div>
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="nick" >姓名：</label>
+                                <div class="rlf-group">
+                                    <input type="text" name="nickname" id="nick"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="请输入姓名"/>
+                                    <p class="rlf-tip-wrap errorHint color-red" ></p>
+                                </div>
+                            </div>
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="nick" >学号：</label>
+                                <div class="rlf-group">
+                                    <input type="text" name="nickname" id="nick"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="请输入学号"/>
+                                    <p class="rlf-tip-wrap errorHint color-red" ></p>
+                                </div>
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="nick" >手机号：</label>
+                                <div class="rlf-group">
+                                    <input type="text" name="nickname" id="nick"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="请输入手机号"/>
+                                    <p class="rlf-tip-wrap errorHint color-red" ></p>
+                                </div>
+                            </div>
+                            <!-- <div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="province-select">城市：</label>
+                                <div class="rlf-group profile-address">
+                                    <select id="province-select" class='moco-form-control' hidefocus="true">
+                                        <option value="0">选择省份</option>
+                                        <option value="1">北京</option>
+                                        <option value="2">天津</option>
+                                        <option value="3">河北</option>
+                                        <option value="4">山西</option>
+                                        <option value="5">内蒙古</option>
+                                        <option value="6">辽宁</option>
+                                        <option value="7">吉林</option>
+                                        <option value="8">黑龙江</option>
+                                        <option value="9">上海</option>
+                                        <option value="10">江苏</option>
+                                        <option value="11">浙江</option>
+                                        <option value="12">安徽</option>
+                                        <option value="13">福建</option>
+                                        <option value="14">江西</option>
+                                        <option value="15">山东</option>
+                                        <option value="16">河南</option>
+                                        <option value="17">湖北</option>
+                                        <option value="18">湖南</option>
+                                        <option value="19">广东</option>
+                                        <option value="20">海南</option>
+                                        <option value="21">广西</option>
+                                        <option value="22">甘肃</option>
+                                        <option value="23">陕西</option>
+                                        <option value="24">新疆</option>
+                                        <option value="25">青海</option>
+                                        <option value="26">宁夏</option>
+                                        <option value="27">重庆</option>
+                                        <option value="28">四川</option>
+                                        <option value="29">贵州</option>
+                                        <option value="30">云南</option>
+                                        <option value="31">西藏</option>
+                                        <option value="32">台湾</option>
+                                        <option value="33">澳门</option>
+                                        <option value="34">香港</option>
+                                        <option value="100">其他</option>
+                                    </select>
+                                    <select class='moco-form-control' id="city-select" hidefocus="true">
+                                        <option value="0">选择城市</option>
+                                        <option value="1">杭州</option>
+                                        <option value="2">其他</option>
+                                    </select>
+                                    <select class='moco-form-control mr0' id="area-select" hidefocus="true">
+                                        <option value="0">选择区县</option>
+                                        <option value="1">余杭</option>
+                                        <option value="2">其他</option>
+                                    </select>
+                                    <div class="cb"></div>
+                                    <p class="rlf-tip-wrap errorHint color-red"></p>
+                                </div>
+                            </div>
+ -->
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name h16 lh16" >性别：</label>
+                                <div class="rlf-group rlf-radio-group">
+                                    <label  class="lh16"><input type="radio" hidefocus="true" value="0"   name="sex">保密</label>
+                                    <label  class="lh16"><input type="radio" hidefocus="true" value="1"  name="sex">男</label>
+                                    <label  class="lh16"><input type="radio" hidefocus="true" value="2" checked="checked" name="sex">女</label>
+                                    <p class="rlf-tip-wrap errorHint color-red"></p>
+                                </div>
+                            </div>
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="aboutme">个性签名：</label>
+                                <div class="rlf-group">
+                                    <div class="pr">
+                                        <textarea name="aboutme"  id="aboutme"  rows="5" class="noresize js-sign moco-form-control"></textarea>
+                                        <p class="numCanInput js-numCanInput ">还可以输入128个字符</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wlfg-wrap clearfix">
+                                <label class="label-name" for="profile-submit"></label>
+                                <div class="rlf-group">
+                                    <span id="profile-submit"  hidefocus="true"  aria-role="button" class="rlf-btn-green btn-block profile-btn">保存</span>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
