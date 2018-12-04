@@ -1,0 +1,193 @@
+{% extends "sells/head.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页</title>
+
+</head>
+<body>
+{% block content %}
+    <link rel="stylesheet" href={% static "css/detail.css" %}>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+    <div class="top-main">
+        <img src="../../../static/img/come%20on.png" alt="" width="300px">
+        <div class="search-wrapper">
+            <div class="search-box">
+                <div data-toggle="arrowdown" id="arrow8" class="search-toggle">
+                    宝贝
+                </div>
+                <input class="search-in" type="text" placeholder="    搜 '高等数学’ 试试,好好学习,天天向上">
+                <input type="button" class="search-but" value="搜索">
+
+            </div>
+
+            <!--other-search-->
+            <div class="other-search">
+                <a href="#">高等数学</a>
+                <a href="#">数据结构</a>
+                <a href="#">充电宝</a>
+                <a href="#">面膜</a>
+                <a href="#">瑜伽垫</a>
+                <a href="#">打底裤</a>
+                <a href="#">蚊帐</a>
+                <a href="#">凉鞋</a>
+                <a href="#">男士T恤</a>
+                <a href="#">连衣裙</a>
+                <a href="#">时尚女包</a>
+                <a href="#">女士T恤</a>
+                <a href="#">雪纺衫</a>
+
+                <a href="#" class="more-other">更多<i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="sub-nav">
+        <!--sub-nav-cell-->
+        <div class="sub-nav-cell">
+            <h3 class="orange">主题市场</h3>
+            <ul class="sub-nav-box">
+                <li><a href="#">学习用品</a></li>
+                <li><a href="#">书籍</a></li>
+                <li><a href="#">试卷</a></li>
+                <li><a href="#">文具</a></li>
+                <li><a href="#">美食饮品</a></li>
+                <li><a href="#">零食</a></li>
+                <li><a href="#">生鲜</a></li>
+                <li><a href="#">饮料</a></li>
+                <li><a href="#">美妆护肤</a></li>
+                <li><a href="#">彩妆</a></li>
+                <li><a href="#">洗护</a></li>
+                <li><a href="#">护肤品</a></li>
+                <li><a href="#">鞋服配饰</a></li>
+                <li><a href="#">服装</a></li>
+                <li><a href="#">箱包</a></li>
+                <li><a href="#">配饰</a></li>
+                <li><a href="#">交通工具</a></li>
+                <li><a href="#">自行车</a></li>
+                <li><a href="#">电动车</a></li>
+                <li><a href="#">轮滑</a></li>
+                <li><a href="#">数码产品</a></li>
+                <li><a href="#">手机</a></li>
+                <li><a href="#">相机</a></li>
+                <li><a href="#">电脑</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <a href="#"><img src="../../../static/img/1%20(2).jpg"></a>
+        </div>
+        <div class="user-info">
+            <a href="#"><img src="../../../static/img/头像.png" width="250px"></a>
+            <h3>hi，旺仔</h3>
+        </div>
+
+    </div>
+    <div class="recommend">
+        <div class="circle">
+            <h3 style="color: green;font-size: 17px;">个性推荐</h3>
+        </div>
+        <div class="re">
+            <ul>
+                <li><img src="../../../static/img/1.jpg">
+                    <div class="btn">
+                        <button type="button">服装</button>
+                        <button type="button">风衣</button>
+                        <button type="button">￥35</button>
+                    </div>
+                </li>
+                <li><img src="../../../static/img/2.jpg">
+                    <div class="btn">
+                        <button type="button">摄影</button>
+                        <button type="button">旅行</button>
+                        <button type="button">￥35</button>
+                    </div>
+                </li>
+                <li><img src="../../../static/img/2.jpg">
+                    <div class="btn">
+                        <button type="button">摄影</button>
+                        <button type="button">旅行</button>
+                        <button type="button">￥35</button>
+                    </div>
+                </li>
+                <li><img src="../../../static/img/4.jpg">
+                    <div class="btn">
+                        <button type="button" class="price">计算机</button>
+                        <button type="button" class="price">大二下</button>
+                        <button type="button" class="price">￥35</button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="kinds">
+        <div class="kinds_name">
+            <div class="name">
+                <h3>学习用品</h3>
+            </div>
+            <div class="k_1">
+                <li><a href="#">书籍</a></li>
+                <li><a href="#">试卷</a></li>
+                <li><a href="#">字帖</a></li>
+                <li><a href="#">笔记本</a></li>
+                <li><a href="#">钢笔</a></li>
+                <li><a href="#">毛笔</a></li>
+            </div>
+        </div>
+        <div class="just-look">
+            <a href="#"><img src="../../../static/img/4.jpg"><h6>x新东方英语六级单词书</h6></a>
+            <a href="#"><img src="../../../static/img/4.jpg"><h6>高等数学笔记本</h6></a>
+            <a href="#"><img src="../../../static/img/1.jpg"><h6>派克钢笔</h6></a>
+            <a href="#"><img src="../../../static/img/1.jpg"><h6>楷体字帖</h6></a>
+        </div>
+    </div>
+    <div class="kinds">
+        <div class="kinds_name">
+            <div class="name">
+                <h3>美食饮品</h3>
+            </div>
+            <div class="k_1">
+                <li><a href="#">薯片</a></li>
+                <li><a href="#">猪肉铺</a></li>
+                <li><a href="#">水果</a></li>
+                <li><a href="#">咖啡</a></li>
+                <li><a href="#">可乐</a></li>
+                <li><a href="#">奶茶</a></li>
+            </div>
+        </div>
+        <div class="just-look">
+            <a href="#"><img src="../../../static/img/4.jpg"><h6>乐视薯片</h6></a>
+            <a href="#"><img src="../../../static/img/4.jpg"><h6>香港功夫珍妮小曲奇</h6></a>
+            <a href="#"><img src="../../../static/img/1.jpg"><h6>可口可乐</h6></a>
+            <a href="#"><img src="../../../static/img/1.jpg"><h6>红心柚</h6></a>
+        </div>
+    </div>
+    <div class="kinds">
+        <div class="kinds_name">
+            <div class="name">
+                <h3>生活用品</h3>
+            </div>
+            <div class="k_1">
+                <li><a href="#">雨伞</a></li>
+                <li><a href="#">优惠券</a></li>
+                <li><a href="#">鲜花</a></li>
+                <li><a href="#">耳机</a></li>
+                <li><a href="#">玩偶</a></li>
+                <li><a href="#">充电宝</a></li>
+            </div>
+        </div>
+        <div class="just-look">
+            <a href="#"><img src="../../../static/img/4.jpg"><h6>欧丽缇保湿喷雾</h6></a>
+            <a href="#"><img src="../../../static/img/4.jpg"><h6>兰蔻轻柔爽肤水</h6></a>
+            <a href="#"><img src="../../../static/img/1.jpg"><h6>闪婚纱面膜</h6></a>
+            <a href="#"><img src="../../../static/img/1.jpg"><h6>闪十色眼影盘</h6></a>
+        </div>
+    </div>
+{% endblock %}
+
+
+</body>
+</html>
