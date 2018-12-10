@@ -6,7 +6,6 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>首页</title>
-
 </head>
 <body>
 {% block content %}
@@ -49,30 +48,13 @@
         <div class="sub-nav-cell">
             <h3 class="orange">主题市场</h3>
             <ul class="sub-nav-box">
-                <li><a href="#">学习用品</a></li>
-                <li><a href="#">书籍</a></li>
-                <li><a href="#">试卷</a></li>
-                <li><a href="#">文具</a></li>
-                <li><a href="#">美食饮品</a></li>
-                <li><a href="#">零食</a></li>
-                <li><a href="#">生鲜</a></li>
-                <li><a href="#">饮料</a></li>
-                <li><a href="#">美妆护肤</a></li>
-                <li><a href="#">彩妆</a></li>
-                <li><a href="#">洗护</a></li>
-                <li><a href="#">护肤品</a></li>
-                <li><a href="#">鞋服配饰</a></li>
-                <li><a href="#">服装</a></li>
-                <li><a href="#">箱包</a></li>
-                <li><a href="#">配饰</a></li>
-                <li><a href="#">交通工具</a></li>
-                <li><a href="#">自行车</a></li>
-                <li><a href="#">电动车</a></li>
-                <li><a href="#">轮滑</a></li>
-                <li><a href="#">数码产品</a></li>
-                <li><a href="#">手机</a></li>
-                <li><a href="#">相机</a></li>
-                <li><a href="#">电脑</a></li>
+                <li><a href="{% url "sells:product_list" %}">所有</a></li>
+                {% for c in categories %}
+                    <li>
+                        <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                    </li>
+                {% endfor %}
+
             </ul>
         </div>
         <div class="content">
@@ -137,12 +119,19 @@
                 <li><a href="#">毛笔</a></li>
             </div>
         </div>
-        <div class="just-look">
-            <a href="#"><img src="../../../static/img/4.jpg"><h6>x新东方英语六级单词书</h6></a>
-            <a href="#"><img src="../../../static/img/4.jpg"><h6>高等数学笔记本</h6></a>
-            <a href="#"><img src="../../../static/img/1.jpg"><h6>派克钢笔</h6></a>
-            <a href="#"><img src="../../../static/img/1.jpg"><h6>楷体字帖</h6></a>
-        </div>
+        {% for product in products %}
+            <div class="just-look">
+                <a href="{{ product.get_absolute_url }}">
+                    <img src="
+
+
+                            {% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+                </a>
+                <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                <br>
+                ${{ product.price }}
+            </div>
+        {% endfor %}
     </div>
     <div class="kinds">
         <div class="kinds_name">

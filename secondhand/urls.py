@@ -20,7 +20,8 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('sells.urls', namespace='sells')),
+    path('login_res/', include('login_res.urls', namespace='login_res')),
+    path('sells/', include('sells.urls', namespace='sells')),
 
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
