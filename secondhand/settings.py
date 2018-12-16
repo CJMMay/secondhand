@@ -26,8 +26,7 @@ SECRET_KEY = 'o37+o7_-4ok03gffbd^4p_is=+zb9cgp6h6xb%6p5vdcsd8f=o'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 
 # Application definition
 
@@ -38,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sells.apps.SellsConfig',
-    'login_res',
+    'sells.apps.SellsConfig'
 ]
 
 MIDDLEWARE = [

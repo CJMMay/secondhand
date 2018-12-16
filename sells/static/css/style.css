@@ -1,7 +1,8 @@
 .top-main {
-	margin: 10px auto;
+	margin: auto;
 	width: 1190px;
 	height: 115px;
+
 }
 
 .top-main:after {
@@ -15,6 +16,7 @@
 
 .top-main>img {
 	float: left;
+
 }
 
 /*search-wrapper*/
@@ -22,6 +24,7 @@
 .search-wrapper-scroll {
 	float: left;
 	margin-top: 20px;
+	margin-left: 40px;
 	width: 730px;
 	height: 75%;
 }
@@ -159,9 +162,8 @@
 }
 
 .sub-nav {
-	position: relative;
-	margin: 25px auto;
-	width: 1190px;
+	margin: auto auto;
+	width: 1100px;
 	height: auto;
 	overflow: hidden;
 }
@@ -213,14 +215,20 @@
 
 .content {
 	float: left;
+	margin:10px;
+}
+.content img{
+	width:400px;
+	height:300px;
 }
 
 .user-info {
 	float: left;
-	margin: 25px;
+	margin: 10px;
+	margin-left: 30px;
 	width: 250px;
 	height: auto;
-
+	padding:10px;
 }
 
 .user-info img {
@@ -229,13 +237,13 @@
 
 .user-info h3 {
 	margin-left: 70px;
-	width: 100%;
+	width: 200px;
 
 }
 
 .recommend {
 	clear: both;
-	margin: auto;
+	margin: auto auto;
 	width: 1190px;
 	height:auto;
 }
@@ -244,7 +252,7 @@
 	float: left;
 	width: 100px;
 	height:100px;
-	margin:150px auto;
+	margin:60px auto;
 	background-color: skyblue;
 	border-radius: 50%;
 }
@@ -252,21 +260,26 @@
 	text-align: center;
 	margin: auto;
 	padding-top:40px ;
+	font-size: 18px;
 }
-.recommend>re{
-	float:left;
-	height:200px;
-	width:1100px;
-	border:1px solid orange
-}
+/*.re{*/
+	/*float:left;*/
+	/*height:200px;*/
+	/*width:1100px;*/
+	/*border:1px solid orange*/
+/*}*/
+.recommend ul{
+	padding:auto;
 
+}
 .recommend ul li{
+
 	float: left;
 	margin: 20px;
 	
 }
 .recommend ul li img{
-	height: 300px;
+	height: 200px;
 	width: 200px;
 }
 .recommend ul li btn{
@@ -280,6 +293,8 @@
 	margin:10px 10px;
 	border-radius: 30%;
 }
+
+/*列表展示大框*/
 .kinds{
 	clear: both;
 	margin: 25px auto;
@@ -289,51 +304,51 @@
 }
 .kinds_name{
 		float: left;
-		width: 200px;
-		padding-left:15px;
-		height: 100%;
+		width: auto;
+		height:100%;
 		border-right: 1px solid #eee;
 		text-align: center;
+		margin:auto auto;
+
 }
 .kinds_name h3{
 	background-color: rgb(255, 221, 62);
 	width: 100px;
-	height: 25px;
-	margin: 25px auto;
-	padding-top: 10px;
-	border-radius: 30%;
+	height: 100%;
+	margin: auto 10px;
+	padding: 10px;
+	/*border-radius: 30%;*/
+	font-size:20px;
 	
 }
-.kinds_name li{
-	display: inline-block;
-	margin: 2px 2px;
-	height: 25px;
-	line-height: 25px;
-	width: 58px;
-	text-align: center;
+.kinds_name ul li{
+	float: left;
 }
 
-.kinds just-look{
-	margin: auto;
-    width: 100%;
-    padding-top: 20px;
-    height: 150px;
-    border-top: 1px dashed #eee;
+/*展示商品列表*/
+.just-look{
+	float: left;
+	width: auto;
+	overflow: hidden;
+	margin:auto;
 }
-.just-look > a{
-	margin: 20px;
-    display: inline-block;
+.just-look ul{
+	padding:auto;
 }
-.just-look a img{
-   height: 300px;
+.just-look ul li{
+	margin: 10px;
+	float: left;
+}
+.just-look img{
+   height: 200px;
    width: 200px;
 }
-.just-look h6{
-    margin-top: 15px;
-    font-weight: lighter;
-    text-align: center;
-    color: #3c3c3c;
+.good_name{
+	font-size: 15px;
 }
-.just-look h6:hover{
-    color: #f40;
+.good_price{
+	margin: auto;
+	float: right;
+	font-size: 20px;
+	color: rgb(255, 221, 62);
 }
