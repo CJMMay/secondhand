@@ -4,7 +4,7 @@ from .models import User
 from django import forms
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-
+from django.shortcuts import HttpResponse
 # Create your views here.
 # 显示注册页面
 def res(request):
@@ -65,7 +65,13 @@ def xinxi(request):
     lists=User.objects.get(username=username)
     print(lists)
     con={
-        "list":lists
+        "list":lists,
+        "username":lists.username,
+        "sex":lists.sex,
+        "age":lists.age,
+        "tele":lists.tele,
+        "eml":lists.eml,
+        "jianjie":lists.jianjie,
     }
     return render(request,'xinxi.html',con)
  

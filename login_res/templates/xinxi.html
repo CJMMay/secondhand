@@ -11,7 +11,7 @@
     <link rel="stylesheet" href={% static '/css/common-less.css' %}>
     <link rel="stylesheet" href={% static '/css/profile-less.css' %}>
 </head>
-<body>
+<body style="background-image: url({% static '/img/background.jpg' %});background-size:100% 150%;">
  <div id="main">
 <li role="presentation"><a href="{% url 'sells:product_list' %}">主页</a></li>
     <div class="page-settings">
@@ -24,7 +24,7 @@
         <div class="setting pb10">
             <div class="nav-tabs pa">
                 <a href="{% url 'login_res:xinxi' %}" class="baseinfo fl active">信息设置</a>
-                <a href="{% url 'login_res:xinxi' %}" class="countinfo fl">信息显示</a>
+                <a href="{% url 'login_res:xinxi' %}" class="countinfo fl"></a>
                 <div class="cb"></div>
             </div>
             <div class="contentBox">
