@@ -1,49 +1,74 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>发布闲置</title>
-		<link type="text/css" rel="stylesheet" href="css/detailinfo.css" />
+		<link rel="stylesheet" href={% static "css/detailinfo.css" %} />
 	</head>
-	<body>
-		<div id="commonTopbar" class="commonTopbar" style="min-width: 1190px;">
-			<div class="w pos">
-				<div class="bar_left">
-					<h2>杭州</h2>
-					<span id="commonTopbar_ipconfig">
-						"["
-						<a href="" target="_self" tongji_tag="pc_topbar_log_changcity" style="margin-left:0; padding:0 3px;">切换城市</a>
-						"]"
-					</span>
-				</div>
-				<div class="bar_right">
-					<ul>
+	<body style="background: url(../../../static/img/background.jpg); background-repeat: no-repeat;background-size:cover">
+		<div>
+			<div class="search_bar clearfix">
+			<div class="head fr">
+				<ul>
 					<li><a href="#">首页</a></li>
 					<li><a href="#">发布闲置</a></li>
 					<li><a href="#">个人中心</a></li>
-				    </ul>
-				</div>	
+				</ul>
 			</div>
+		    </div>
 		</div>
-		<div class="hh-bar clearfix">
-			::before
-			<div class="hh-bar1">
-				<span>二手手机</span>
-				<a href="#" id="chongxuanleibie">重选类别</a>
-				::after
-			</div>
-			<div class="hh-bar2 hh-bar-active">
-				::before
-				"2.填写信息"
-				::after
-			</div>
-			<div class="hh-bar3">
-				::before
-				"3.完成发布"
-				::after
-			</div>
-			::after
+		<div class="center_content">
+			<form class="fo" method="post" action="{% url 'sells:do_publish' %}">
+				 {% csrf_token %}    
+				<label class="lab">标题</label>
+		        <input class="shuru" id="biaoti" name='name' required/>
+		         <br />
+		         <br />
+				<label class="lab">详情</label>
+		        <textarea class="shuru" id="xiangqing" name='description'>描述物品的详细信息，入手渠道，转手原因和使用感受</textarea>
+	          <ul>
+				<span style="font-family: '微软雅黑'; font-size: 20px; margin-left: 100px;margin-bottom: 20px;">封面</span>
+                <input type="file" name="img" style="margin-left:20px">
+                <input type="submit" value="上传" class="shuru">
+              </ul>
+                <br />
+				<br />
+				<label class="lab">成色</label>
+		        <input class="shuru" id="chengse" name='gold' required/>
+		        <br />
+		        <br />
+		        <label class="lab">分类</label>
+				<select style="border:1px solid #E5E5E5;width:250px ;height: 35px;font-family:'微软雅黑';margin-left: 10px;" name='category'>
+                    <option value="1">学习用品</option>
+                    <option value="2">生活用品</option>
+                    <option value="3">美妆护肤</option>
+                    <option value="4">鞋服配饰</option>
+                    <option value="5">交通工具</option>
+                    <option value="6">数码产品</option>
+				</select>
+				<br />
+				<br />
+				<label class="lab">价格</label>
+		        <input class="shuru" id="jiage" name='price' required/>	            
+	           <br/>
+	           <br/>
+		        <label class="lab">电话</label>
+		        <input class="shuru" id="dianhua" name='tel' required/>
+		         <br />
+		         <br />
+		        <label class="lab">标签</label>
+				<select style="border:1px solid #E5E5E5;width:250px ;height: 35px;font-family:'微软雅黑';margin-left: 10px;">
+					<option value="英语">英语</option>
+                    <option value="考试">考试</option>
+                    <option value="词汇">词汇</option>
+				</select>
+				<div style="width:600px; height:100px;text-align: center;">
+					<button type="submit" class="bt">确认发布</button>
+				</div>
+		</form>
 		</div>
-		
 	</body>
 </html>
+
+

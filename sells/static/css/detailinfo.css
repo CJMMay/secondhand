@@ -184,3 +184,81 @@ img{border:0;}
 .l_wrap{width:200px;}
 .r_wrap{width:980px;}
 
+
+
+/*发布页面样式*/
+.center_content
+{
+	width:600px;
+	background-color: white;
+	margin: 0 auto;
+	height:1300;
+	border:1px dashed #E5E5E5;
+	border-radius:20px ;
+}
+.lab
+{
+	font-family: "微软雅黑";
+	font-size:20px ;
+	margin-left:100px;
+	margin-bottom: 20px;
+}
+.shuru
+{
+	margin-bottom: 10px;
+	border:1px solid #E5E5E5;
+	margin-left: 10px;
+	font-size: 20px;
+}
+#xuehao
+{
+	margin-top: 50px;
+	width: 250px;
+	height: 35px;
+}
+#dianhua
+{
+	width: 250px;
+	height: 35px;
+}
+#biaoti
+{
+	width: 250px;
+	height: 35px;
+	margin-top:20px;
+}
+#jiage
+{
+	width: 250px;
+	height: 35px;
+}
+#chengse
+{
+	width: 250px;
+	height: 35px;
+}
+#xiangqing
+{
+	width: 300px;
+	height:250px;
+	vertical-align: top;
+}
+
+.center_content li
+{
+	display: inline-block;
+	text-decoration:none;
+	margin-left: 10px;
+}
+
+.bt
+{
+	text-align: center;
+	border:2px solid #FFA500;
+	border-radius: 5px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	background-color: #FFA500;
+	color: white;
+	margin-top:50px ;
+}

@@ -15,7 +15,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -26,8 +27,7 @@ SECRET_KEY = 'o37+o7_-4ok03gffbd^4p_is=+zb9cgp6h6xb%6p5vdcsd8f=o'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 
 # Application definition
 
@@ -40,9 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sells.apps.SellsConfig',
     'login_res',
-    'cart.apps.CartConfig',
-
-
 ]
 
 MIDDLEWARE = [
@@ -60,7 +57,7 @@ ROOT_URLCONF = 'secondhand.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,7 +65,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cart.context_processors.cart'
             ],
         },
     },
@@ -128,5 +124,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),#.replace('\\','/')
 ]
-
-CART_SESSION_ID = 'cart'

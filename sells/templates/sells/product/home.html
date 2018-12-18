@@ -43,22 +43,50 @@
             </div>
         </div>
     </div>
+
     <div class="sub-nav">
         <!--sub-nav-cell-->
         <div class="sub-nav-cell">
             <h3 class="orange">主题市场</h3>
             <ul class="sub-nav-box">
-                <li><a href="{% url "sells:product_list" %}">所有</a></li>
+                <li><a href="#just-look">所有</a></li>
                 {% for c in categories %}
                     <li>
                         <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
                     </li>
                 {% endfor %}
+                <li><a href="#">学习用品</a></li>
+                <li><a href="#">书籍</a></li>
+                <li><a href="#">试卷</a></li>
+                <li><a href="#">文具</a></li>
+                <li><a href="#">美食饮品</a></li>
+                <li><a href="#">零食</a></li>
+                <li><a href="#">生鲜</a></li>
+                <li><a href="#">饮料</a></li>
+                <li><a href="#">美妆护肤</a></li>
+                <li><a href="#">彩妆</a></li>
+                <li><a href="#">洗护</a></li>
+                <li><a href="#">护肤品</a></li>
+                <li><a href="#">鞋服配饰</a></li>
+                <li><a href="#">服装</a></li>
+                <li><a href="#">箱包</a></li>
+                <li><a href="#">配饰</a></li>
+                <li><a href="#">交通工具</a></li>
+                <li><a href="#">自行车</a></li>
+                <li><a href="#">电动车</a></li>
+                <li><a href="#">轮滑</a></li>
+                <li><a href="#">数码产品</a></li>
+                <li><a href="#">手机</a></li>
+                <li><a href="#">相机</a></li>
+                <li><a href="#">电脑</a></li>
+
 
             </ul>
         </div>
+
+        {#        轮播图#}
         <div class="content">
-            <a href="#"><img src="../../../static/img/1%20(2).jpg"></a>
+            <a href="#"><img src="../../../static/img/糕点.jpg"></a>
         </div>
         <div class="user-info">
             <a href="#"><img src="../../../static/img/头像.png" width="250px"></a>
@@ -66,9 +94,11 @@
         </div>
 
     </div>
+
+    {#个性推荐#}
     <div class="recommend">
         <div class="circle">
-            <h3>个性推荐</h3>
+            <h3>最新发布</h3>
         </div>
         <div class="re">
             <ul>
@@ -101,78 +131,56 @@
                     </div>
 
                 </li>
+                 <div style="clear:both;"></div>
             </ul>
+            <div style="clear:both;"></div>
         </div>
 
     </div>
     <div class="kinds">
         <div class="kinds_name">
-            <div class="name">
-                <h3>学习用品</h3>
-            </div>
-            <div class="k_1">
-                <li><a href="#">书籍</a></li>
-                <li><a href="#">试卷</a></li>
-                <li><a href="#">字帖</a></li>
-                <li><a href="#">笔记本</a></li>
-                <li><a href="#">钢笔</a></li>
-                <li><a href="#">毛笔</a></li>
-            </div>
+            <ul>
+                <li>
+                    <a href="{% url "sells:product_list" %}"><h3>所有</h3></a>
+                </li>
+                {% for c in categories %}
+                    <li>
+                        <a href="{{ c.get_absolute_url }}"><h3>{{ c.name }}</h3></a>
+                    </li>
+
+                {% endfor %}
+            </ul>
         </div>
-        {% for product in products %}
-            <div class="just-look">
-                <a href="{{ product.get_absolute_url }}">
-                    <img src="
-                            {% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
-                </a>
-                <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
-                <br>
-                ${{ product.price }}
-            </div>
-        {% endfor %}
+
+        <div class="just-look" id="just-look">
+            <ul>
+
+                {% for product in products %}
+                    <li>
+                        <a href="{{ product.get_absolute_url }}">
+                            <img src="
+                                    {% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+                        </a>
+                        <div>
+                            <div class="good_name">{{ product.name }}</div>
+                            <div class="good_price">￥{{ product.price }}</div>
+                        </div>
+                    </li>
+
+                {% endfor %}
+
+                <div style="clear:both;"></div>
+            </ul>
+
+        </div>
+     <div style="clear:both;"></div>
     </div>
-    <div class="kinds">
-        <div class="kinds_name">
-            <div class="name">
-                <h3>美食饮品</h3>
-            </div>
-            <div class="k_1">
-                <li><a href="#">薯片</a></li>
-                <li><a href="#">猪肉铺</a></li>
-                <li><a href="#">水果</a></li>
-                <li><a href="#">咖啡</a></li>
-                <li><a href="#">可乐</a></li>
-                <li><a href="#">奶茶</a></li>
-            </div>
-        </div>
-        <div class="just-look">
-            <a href="#"><img src="../../../static/img/4.jpg"><h6>乐视薯片</h6></a>
-            <a href="#"><img src="../../../static/img/4.jpg"><h6>香港功夫珍妮小曲奇</h6></a>
-            <a href="#"><img src="../../../static/img/1.jpg"><h6>可口可乐</h6></a>
-            <a href="#"><img src="../../../static/img/1.jpg"><h6>红心柚</h6></a>
-        </div>
-    </div>
-    <div class="kinds">
-        <div class="kinds_name">
-            <div class="name">
-                <h3>生活用品</h3>
-            </div>
-            <div class="k_1">
-                <li><a href="#">雨伞</a></li>
-                <li><a href="#">优惠券</a></li>
-                <li><a href="#">鲜花</a></li>
-                <li><a href="#">耳机</a></li>
-                <li><a href="#">玩偶</a></li>
-                <li><a href="#">充电宝</a></li>
-            </div>
-        </div>
-        <div class="just-look">
-            <a href="#"><img src="../../../static/img/4.jpg"><h6>欧丽缇保湿喷雾</h6></a>
-            <a href="#"><img src="../../../static/img/4.jpg"><h6>兰蔻轻柔爽肤水</h6></a>
-            <a href="#"><img src="../../../static/img/1.jpg"><h6>闪婚纱面膜</h6></a>
-            <a href="#"><img src="../../../static/img/1.jpg"><h6>闪十色眼影盘</h6></a>
-        </div>
-    </div>
+
+
+
+
+
+
 {% endblock %}
 
 

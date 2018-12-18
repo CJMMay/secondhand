@@ -1,112 +1,97 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
+    <link rel="stylesheet" href="{% static 'css/res.css' %}">
 </head>
 
-<body>
-<div class="jumbotron">
-    <h1>注册</h1>
-    <a href="{% url 'login_res:login' %}" class="btn btn-primary">去登录</a>
-    <hr>
-    <div class="container">
-        <div class="row">
 
+<body>
+    <div class="xiao-container">
+        <div class="xiao-register-box">
+            <div class="xiao-title-box">
+                <span>用户注册</span>
+                <hr>
+            </div>
+            <!-- <a href="{% url 'login_res:login' %}" class="btn btn-primary">去登录</a> -->
             <form action="{% url 'login_res:do_res' %}" method="post" class="form-horizontal">
                 {% csrf_token %}
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">账号</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputEmail3" name='stuid' placeholder="账号"
-                               required> {% if request.session.error %}{{ request.session.error }}
-                    {% endif %}
+                <div class="xiao-username-box">
+                        <span class="xiao-require">*</span>
+                    <label for="username" class="col-sm-2 control-label">账号</label>
+                    <div class="xiao-username-input">
+                        <input type="text" class="form-control" id="username" name='stuid' placeholder="请输入账号" required> {% if request.session.error %}{{ request.session.error }} {% endif %}
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
-                    <div class="col-sm-4">
+                <div class="xiao-userPassword-box">
+                        <span class="xiao-require">*</span>
+                    <label for="userPassword" class="col-sm-2 control-label">密码</label>
+                    <div class="xiao-userPassword-input">
                         {% if request.session.error %}
-                            <input type="password" class="form-control" id="inputPassword3" name='password'
-                                   placeholder="密码"
-                                   required value="{{ password }}">
-                        {% else %}
-                            <input type="password" class="form-control" id="inputPassword3" name='password'
-                                   placeholder="密码"
-                                   required>
-                        {% endif %}
+                        <input type="password" class="form-controlcontrol" id="userPassword" name='password' placeholder="请输入密码 长度:6-12个字符" required value="{{ password }}"> {% else %}
+                        <input type="password" class="form-control" id="userPassword" name='password' placeholder="请输入密码 长度:6-12个字符" required> {% endif %}
 
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="username2">
+                        <span class="xiao-require">*</span>
                     <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" id="inputEmail3" name='username' placeholder="用户名"
-                               required> {% if request.session.error %}{{ request.session.error }}
-                    {% endif %}
+                    <div class="xiao-userRePassword-input">
+                        <input type="text" class="form-control" id="inputEmail3" name='username' placeholder="请输入用户名" required> {% if request.session.error %}{{ request.session.error }} {% endif %}
                     </div>
                 </div>
 
 
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">联系方式</label>
-                    <div class="col-sm-4">
+                <div class="xiao-userPhone-box">
+                        <span class="xiao-require">*</span>
+                    <label for="userPhone" class="col-sm-2 control-label">联系方式</label>
+                    <div class="xiao-userPhone-input">
                         {% if request.session.error %}
-                            <input type="text" class="form-control" id="inputPassword3" name='tele' placeholder="联系方式"
-                                   required value="{{ tele }}">
-                        {% else %}
-                            <input type="text" class="form-control" id="inputPassword3" name='tele' placeholder="联系方式"
-                                   required>
-                        {% endif %}
+                        <input type="text" class="form-control" id="userPhone" name='tele' placeholder="请输入联系方式" required value="{{ tele }}"> {% else %}
+                        <input type="text" class="form-control" id="userPhone" name='tele' placeholder="请输入联系方式" required> {% endif %}
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">专业</label>
-                    <div class="col-sm-4">
+                <div class="major-box">
+                        <span class="xiao-require">*</span>
+                    <label for="userMajor" class="col-sm-2 control-label">专业</label>
+                    <div class="userMajor-input">
                         {% if request.session.error %}
-                            <input type="text" class="form-control" id="inputPassword3" name='major' placeholder="专业"
-                                   required value="{{ major }}">
-                        {% else %}
-                            <input type="text" class="form-control" id="inputPassword3" name='major' placeholder="专业"
-                                   required>
-                        {% endif %}
+                        <input type="text" class="form-control" id="userMajor" name='major' placeholder="请输入专业" required value="{{ major }}"> {% else %}
+                        <input type="text" class="form-control" id="userMajor" name='major' placeholder="请输入专业" required> {% endif %}
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">班级</label>
-                    <div class="col-sm-4">
+                <div class="userClass-box">
+                        <span class="xiao-require">*</span>
+                    <label for="userClass" class="col-sm-2 control-label">班级</label>
+                    <div class="userClass-input">
                         {% if request.session.error %}
-                            <input type="text" class="form-control" id="inputPassword3" name='class1' placeholder="班级"
-                                   required value="{{ class1 }}">
-                        {% else %}
-                            <input type="text" class="form-control" id="inputPassword3" name='class1' placeholder="班级"
-                                   required>
-                        {% endif %}
+                        <input type="text" class="form-control" id="userClass" name='class1' placeholder="请输入班级" required value="{{ class1 }}"> {% else %}
+                        <input type="text" class="form-control" id="userClass" name='class1' placeholder="请输入班级" required> {% endif %}
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">性别</label>
-                    <div class="col-sm-4">
+                <div class="userSex-box">
+                        <span class="xiao-require">*</span>
+                    <label for="userSex" class="col-sm-2 control-label">性别</label>
+                    <div class="userSex-input">
                         {% if request.session.error %}
-                            <input type="text" class="form-control" id="inputPassword3" name='sex' placeholder="性别"
-                                   required value="{{ sex }}">
-                        {% else %}
-                            <input type="text" class="form-control" id="inputPassword3" name='sex' placeholder="性别"
-                                   required>
-                        {% endif %}
+                        <input type="text" class="form-control" id="userSex" name='sex' placeholder="请输入性别" required value="{{ sex }}"> {% else %}
+                        <input type="text" class="form-control" id="userSex" name='sex' placeholder="请输入性别" required> {% endif %}
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-4">
+
+                <div class="xiao-submit-box">
                         <button type="submit" class="btn btn-success">注册</button>
-                    </div>
                 </div>
+
+                <!-- <div class="xiao-submit-box">
+                        <input id = "xiao-submit-button" type="submit" value="立即登陆">
+                    </div> -->
             </form>
         </div>
     </div>
-</div>
-
 </body>
 
 </html>
