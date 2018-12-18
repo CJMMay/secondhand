@@ -59,7 +59,7 @@
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
             <div class="col-sm-4">
-                                    <input type="text" name="username" id="inputEmail3"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="陈佳媚" required value="{{ username }}">{% if request.session.error %}{{ request.session.error }}
+                                    <input type="text" name="username" id="inputEmail3"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="陈佳媚" readonly="true" required value="{{ username }}">{% if request.session.error %}{{ request.session.error }}
                     {% endif %}
                                 </div>
                             </div>
