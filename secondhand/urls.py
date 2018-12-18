@@ -22,6 +22,7 @@ from .settings import MEDIA_ROOT
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login_res/', include('login_res.urls', namespace='login_res')),
+    path('cart/', include('cart.urls', namespace='cart')),
     path('sells/', include('sells.urls', namespace='sells')),
     re_path(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 ]

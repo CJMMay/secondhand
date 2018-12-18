@@ -26,8 +26,15 @@
             </div>
             <div class="btn">
                 <ul>
+                  <form action="{% url 'cart:cart_add' product.id %}" method="post">
+    {{ cart_product_form }}
+    {% csrf_token %}
                     <li><a class="buy_btn" href="">立即购买</a></li>
-                    <li><a class="col" href="#">收藏</a></li>
+               <input type="submit" value="收藏" class="col" href="#">
+  
+ 
+    </form>
+    
                     <li><a class="col" href="#">分享</a></li>
                     <div style="clear: both"></div>
                 </ul>
