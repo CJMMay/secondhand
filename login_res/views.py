@@ -51,6 +51,7 @@ def login(request):
             #获取的表单数据与数据库进行比较
             user = User.objects.filter(stuid__exact = stuid,password__exact = password)
             if user:
+                request.session['stuid'] =stuid
                 return render_to_response('sells/product/home.html', {'stuid': stuid})
             else:
                 return HttpResponseRedirect('/login/')
