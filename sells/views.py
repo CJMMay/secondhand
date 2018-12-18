@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404, render_to_response
 from login_res.models import User
 from .models import Category, Product
-#from django import forms
-#from django.http import HttpResponseRedirect
-#from cart.forms import CartAddProductForm
+from django import forms
+from django.http import HttpResponseRedirect
+from cart.forms import CartAddProductForm
 #from django.http import HttpResponseRedirect
 # Create your views here.
 
