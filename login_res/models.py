@@ -11,7 +11,10 @@ class User(models.Model):
     major = models.CharField(max_length=15)
     created = models.DateTimeField(auto_now_add=True)
     sex =models.CharField(max_length=4)
-
+    eml =models.CharField(max_length=100,null=True)
+    age =models.IntegerField(null=True)
+    jianjie =models.TextField(null=True)
+    
     def __str__(self):
         return self.stuid
 

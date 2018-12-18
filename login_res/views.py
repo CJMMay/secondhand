@@ -58,3 +58,32 @@ def login(request):
     else:
         uf = UserForm()
     return render_to_response('login.html',{'uf':uf})
+
+def xinxi(request):
+    username=request.user.username
+    print(username)
+    lists=User.objects.get(username=username)
+    print(lists)
+    con={
+        "list":lists
+    }
+    return render(request,'xinxi.html',con)
+ 
+#保存个人信息
+def do_xinxi(request):
+    username=request.POST.get('username')
+    sex=request.POST.get('sex')
+    age=request.POST.get('age')
+    tele=request.POST.get('tele')
+    eml=request.POST.get('eml')
+    jianjie=request.POST.get('jianjie')
+    res=User.objects.filter(username=username).update(sex=sex,age=age,tele=tele,eml=eml,jianjie=jianjie)
+    if res:
+        con={
+            'username': request.POST.get('username'),
+            'suss':'修改成功'
+        }
+        # return render(request,'login_res/xinxi.html')
+        return redirect(reverse('login_res:xinxi'),con)
+    else:
+        return HttpResponse('修改失败')
