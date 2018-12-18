@@ -27,7 +27,7 @@ def publish(request):
         del request.session['error']
     except:
         return render(request,'publish.html')
-    return render(request)
+    return render(request,'publish.html')
 
 #发布操作
 def do_publish(request):
