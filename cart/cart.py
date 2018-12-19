@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#from decimal import Decimal
+from decimal import Decimal
 from django.conf import settings
 from sells.models import Product
 
@@ -17,18 +17,19 @@ class Cart:
             cart = self.session[settings.CART_SESSION_ID] = {}
         self.cart =cart
         
-    def add(self, product):
-        """
-        向购物车中增加商品或者更新购物车中的数量
-        """
+    def add(self, product,quantity=1, update_quantity=False):
+#        """
+#        向购物车中增加商品或者更新购物车中的数量
+#        """
         product_id = str(product.id)
         if product_id not in self.cart:
             self.cart[product_id] = {'quantity': 0, 'price': str(product.price)}
-#        if update_quantity:
-#            self.cart[product_id]['quantity'] = quantity
-#        else:
-#            self.cart[product_id]['quantity'] += quantity
+        if update_quantity:
+            self.cart[product_id]['quantity'] = quantity
+        else:
+            self.cart[product_id]['quantity'] += quantity
         self.save()
+    
 
     def save(self):
     # 设置session.modified的值为True，中间件在看到这个属性的时候，就会保存session
@@ -55,10 +56,10 @@ class Cart:
         for product in products:
             cart[str(product.id)]['product'] = product
 
-#        for item in cart.values():
-#            item['price'] = Decimal(item['price'])
-#            item['total_price'] = item['price'] * item['quantity']
-#            yield item
+        for item in cart.values():
+            item['price'] = Decimal(item['price'])
+            item['total_price'] = item['price'] * item['quantity']
+            yield item
 #            
 #    def __len__(self):
 #        """
