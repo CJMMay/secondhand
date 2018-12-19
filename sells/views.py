@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, render_to_response
 from login_res.models import User
 from .models import Category, Product
 from cart.forms import CartAddProductForm
+from django.conf import settings
 #from django.http import HttpResponseRedirect
 # Create your views here.
 
@@ -45,6 +46,11 @@ def do_publish(request):
      gold=request.POST.get('gold')
      category=request.POST.get('category')
      cat=Category.objects.get(pk=category)
-     img =request.FILES.get('img')
-     Product.objects.create(name=name,description=description,price=price,gold=gold,category=cat,tel=tel,stuid=id,image=img)
+     f1 = request.FILES.get('img')
+     image= "products/2018/12/publishphotos" + f1.name
+     fname = settings.MEDIA_ROOT + "products/2018/12/publishphotos"+ f1.name
+     with open(fname,'wb') as pic:
+         for c in f1.chunks():
+             pic.write(c)
+     Product.objects.create(name=name,description=description,price=price,gold=gold,category=cat,tel=tel,stuid=id,image=image,slug=name)
      return render_to_response('sells/product/home.html', {'stuid': stuid})
