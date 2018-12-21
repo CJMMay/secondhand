@@ -8,14 +8,17 @@ from django.conf import settings
 
 # 根据品类显示商品
 def product_list(request, category_slug=None):
+    stuid = request.session['stuid']
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
+    new_products=Product.objects.order_by('-created')
+    new_products=new_products[:4]
     if category_slug:
         category = get_object_or_404(categories, slug=category_slug)
         products = products.filter(category=category)
     return render(request, 'sells/product/home.html',
-                  {'category': category, 'categories': categories, 'products': products})
+                  {'category': category, 'categories': categories, 'products': products,'stuid':stuid,'new_products':new_products})
 
 
 def product_detail(request, id, slug):

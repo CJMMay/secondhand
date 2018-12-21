@@ -90,7 +90,7 @@
         </div>
         <div class="user-info">
             <a href="#"><img src="../../../static/img/头像.png" width="250px"></a>
-            <h3>hi，旺仔</h3>
+            <h3>hi,{{ stuid }}</h3>
         </div>
 
     </div>
@@ -102,35 +102,22 @@
         </div>
         <div class="re">
             <ul>
-                <li><img src="../../../static/img/1.jpg">
-                    <div class="btn">
-                        <button type="button">服装</button>
-                        <button type="button">风衣</button>
-                        <button type="button">￥35</button>
-                    </div>
-                </li>
-                <li><img src="../../../static/img/2.jpg">
-                    <div class="btn">
-                        <button type="button">摄影</button>
-                        <button type="button">旅行</button>
-                        <button type="button">￥35</button>
-                    </div>
-                </li>
-                <li><img src="../../../static/img/2.jpg">
-                    <div class="btn">
-                        <button type="button">摄影</button>
-                        <button type="button">旅行</button>
-                        <button type="button">￥35</button>
-                    </div>
-                </li>
-                <li><img src="../../../static/img/4.jpg">
-                    <div class="btn">
-                        <button type="button" class="price">计算机</button>
-                        <button type="button" class="price">大二下</button>
-                        <button type="button" class="price">￥35</button>
-                    </div>
+                {% for product in new_products %}
+                    <li>
+                        <a href="{{ product.get_absolute_url }}">
+                            <img src="
+                                    {% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+                        </a>
+                        <div>
+                            <div class="good_name">{{ product.name }}</div>
+                            <div class="good_price">￥{{ product.price }}</div>
+                              <div style="clear:both;"></div>
+                            <button>{{ product.category }}</button>
+                        </div>
+                    </li>
 
-                </li>
+                {% endfor %}
+
                  <div style="clear:both;"></div>
             </ul>
             <div style="clear:both;"></div>

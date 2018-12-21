@@ -9,13 +9,13 @@ body {
 
 .goods_detail_pic {
 	float: left;
-	width: 410px;
+	width: 400px;
 	height: 550px;
 }
 
 .goods_detail_pic img {
-	width: 400px;
-	height: 533px;
+	width: 350px;
+	height: 400px;
 }
 .goods_detail_list{
 	float: left;

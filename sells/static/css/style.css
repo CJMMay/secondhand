@@ -236,7 +236,7 @@
 }
 
 .user-info h3 {
-	margin-left: 70px;
+	margin:auto;
 	width: 200px;
 
 }
@@ -282,16 +282,13 @@
 	height: 200px;
 	width: 200px;
 }
-.recommend ul li btn{
-	float: left;
-	height:auto;
-	width: 200px;
-	margin: 10px 10px;
-}
+
 .recommend button{
+	width: 100px;
+	font-size: large;
 	background: rgb(255, 221, 62);
-	margin:10px 10px;
-	border-radius: 30%;
+	margin:auto;
+	border-radius: 20px;
 }
 
 /*列表展示大框*/
@@ -350,5 +347,5 @@
 	margin: auto;
 	float: right;
 	font-size: 20px;
-	color: rgb(255, 221, 62);
+	color: rgb(255, 152, 0);
 }
