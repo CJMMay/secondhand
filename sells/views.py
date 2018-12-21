@@ -9,7 +9,7 @@ from django.conf import settings
 # 根据品类显示商品
 def product_list(request, category_slug=None):
     stuid = request.session['stuid']
-    category = None
+    category=None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
     new_products=Product.objects.order_by('-created')
@@ -57,3 +57,6 @@ def do_publish(request):
              pic.write(c)
      Product.objects.create(name=name,description=description,price=price,gold=gold,category=cat,tel=tel,stuid=id,image=image,slug=name)
      return render_to_response('sells/product/home.html', {'stuid': stuid})
+
+# def index(request):
+#     return render(request, 'sells/product/home.html')

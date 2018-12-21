@@ -6,9 +6,10 @@ from django.conf.urls.static import static
 #from . import views  这个也可以使用,跟上面那个一样的
 app_name = 'sells'
 urlpatterns = [
+    path('', views.product_list, name='product_list'),
     path('publish/', views.publish, name='publish'),
     path('do_publish/', views.do_publish, name='do_publish'),
-    path('product_list/', views.product_list, name='product_list'),
+    # path('',views.index),
     path('<slug:category_slug>/', views.product_list, name='product_list_by_category'),
     path('<int:id>/<slug:slug>/', views.product_detail, name='product_detail'),
 ]
