@@ -6,14 +6,14 @@
 	<meta charset="utf-8">
     <title></title>
 </head>
-<body>
+<body style="margin: 0;padding: 0;">
     {% block content %}
     <link rel="stylesheet" href={% static "css/showmypublish.css" %} />
     	<div class="taitou">
     	</div>
     	<div class="daohang">
     		<h2 style="margin-left: 20px;margin-top: 10px;">个人中心</h2>
-    		<hr style="width: 180px;border:1px solid #DEDEDE;padding: 0;margin-left: 20px;" />
+    		<hr style="width: 100px;border:1px solid #DEDEDE;padding: 0;margin-left: 20px;" />
     		<ul class="list">
     			<li class="list-item">
     				<a href="#">我的信息</a>
@@ -46,13 +46,13 @@
     			<div class="product_descript">
     				<div class="product_name">
     					<h3>{{ product.name }}</h3>
-    				    <p style="color: #FFA500;font-size:18px;">￥{{ product.price }}</p>
+    				    <p style="color: #FFA500;font-size:18px;">￥{{ product.price }}</p>				    
     				    <p>{{ product.category }}</p>
     				</div>
-    				<span style="color: #FFA500;margin-left: 600px;margin-top: 50px;display: inline-block;">待售出</span>
+    				<span style="color: #FFA500;margin-left: 500px;margin-top: 50px;display: inline-block;">待售出</span>
     			</div>
     			<div class="product_edit">
-    				<span style="margin-left: 700px;margin-bottom: 10px;">修改信息&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;删除信息&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;付费推广</span>
+    				<span style="margin-left:650px;margin-bottom: 10px;">修改信息&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;删除信息&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;付费推广</span>
               </div>
     		</div>
     		{% endfor %}

@@ -16,7 +16,7 @@
     	</div>
     	<div class="daohang">
     		<h2 style="margin-left: 20px;margin-top: 10px;">个人中心</h2>
-    		<hr style="width: 180px;border:1px solid #DEDEDE;padding: 0;margin-left: 20px;" />
+    		<hr style="width: 100px;border:1px solid #DEDEDE;padding: 0;margin-left: 20px;" />
     		<ul class="list">
     			<li class="list-item">
     				<a href="#">我的信息</a>
@@ -53,7 +53,9 @@
     				    <p style="color: #FFA500;font-size:18px;">￥{{ product.price }}</p>
     				    <p>{{ product.category }}</p>
     				</div>
-    				<a href="{% url 'cart:cart_remove' product.id %}"><span style="color: #FFA500;margin-left: 600px;margin-top: 50px;display: inline-block;">移除收藏</span></a>
+    				<div class="remove">    				    							
+    				<a href="{% url 'cart:cart_remove' product.id %}">移除收藏</a> 
+    				</div> 
     			</div>
     		</div>
     		{% endwith %}
