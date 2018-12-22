@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="utf-8">
     <title>弍货</title>
@@ -12,8 +12,8 @@
     <link rel="stylesheet" href={% static '/css/profile-less.css' %}>
 </head>
 <body style="background-image: url({% static '/img/background.jpg' %});background-size:100% 150%;">
- <div id="main">
-<li role="presentation"><a href="{% url 'sells:product_list' %}">主页</a></li>
+<div id="main">
+    <li role="presentation"><a href="{% url 'sells:product_list' %}">主页</a></li>
     <div class="page-settings">
         <div class="top">
             <div class="w960 mauto top_title">
@@ -34,101 +34,124 @@
                         <div class="wlfg-wrap clearfix ">
                             <label class="label-name" for="job">头像：</label>
                             <div class="rlf-group">
-                                <img class="fl avator-img" id="js-portrait" src="https://b-ssl.duitang.com/uploads/item/201607/21/20160721183004_xkjza.jpeg" width="180" height="180">
+                                <img class="fl avator-img" id="js-portrait"
+                                     src="https://b-ssl.duitang.com/uploads/item/201607/21/20160721183004_xkjza.jpeg"
+                                     width="180" height="180">
                                 <div class="fl ml20 pr">
                                     <div id="avator-btns" class="avator-btn-inner">
 
                                         <div class="avator-btn-wrap">
-                                            <form target="uploadtarget" action="postpic" method="post" enctype="multipart/form-data">
+                                            <form target="uploadtarget" action="postpic" method="post"
+                                                  enctype="multipart/form-data">
                                                 <a href="javascript:void(0)" hidefocus="true" class="avator-btn-fake">上传头像</a>
-                                                <input class="hide" type="file" title="上传头像" name="fileField" id="upload" accept="image/*">
+                                                <input class="hide" type="file" title="上传头像" name="fileField"
+                                                       id="upload" accept="image/*">
                                                 <input class="hide" type="hidden" name="type" value="1">
                                             </form>
-                                            <iframe src="about:blank" id="uploadtarget" name="uploadtarget" frameborder="0" style="display:none;"></iframe>
+                                            <iframe src="about:blank" id="uploadtarget" name="uploadtarget"
+                                                    frameborder="0" style="display:none;"></iframe>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="cb"></div>
-                                <p class="rlf-tip-wrap errorHint color-red" ></p>
+                                <p class="rlf-tip-wrap errorHint color-red"></p>
                             </div>
                         </div>
 
-            <form class="form-horizontal" method="post" action="{% url 'login_res:do_xinxi' %}">
-        {#<form class="navbar-form navbar-left" method="post" action="{% url 'login_res:do_xinxi' %}">#}
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
-            <div class="col-sm-4">
-                                    <input type="text" name="username" id="inputEmail3"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="陈佳媚" readonly="true" required value="{{ username }}">{% if request.session.error %}{{ request.session.error }}
-                    {% endif %}
+                        <form class="form-horizontal" method="post" action="{% url 'login_res:do_xinxi' %}">
+                            {#<form class="navbar-form navbar-left" method="post" action="{% url 'login_res:do_xinxi' %}">#}
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="username" id="inputEmail3" autocomplete="off"
+                                           data-validate="require-nick" class="moco-form-control" placeholder="陈佳媚"
+                                           readonly="true" required
+                                           value="{{ username }}">{% if request.session.error %}
+                                    {{ request.session.error }}
+                                {% endif %}
                                 </div>
                             </div>
-        <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">性别</label>
-            <div class="col-sm-4">
-                <select class="form-control" name="sex">
-                    <option>男</option>
-                    <option>女</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">年龄</label>
-            <div class="col-sm-4">
-                {% if age == None %}
- 
-                    <input type="text" name="age" id="inputEmail3"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="请输入年龄" required value="">
-                {% else %}
- 
-                   <input type="text" name="age" id="inputEmail3"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="请输入年龄" required value="{{ age }}">
-                {% endif %}
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">电话号码</label>
-            <div class="col-sm-4">
-                <input type="text" name="tele" id="inputEmail3"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="请输入电话" required value="{{ tele }}">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
-            <div class="col-sm-4">
-                {% if eml == None %}
- 
-                    <input type="text" name="eml" id="inputEmail3"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="请输入邮箱" required value="">
-                {% else %}
- 
-                    <input type="text" name="eml" id="inputEmail3"  autocomplete="off"  data-validate="require-nick"  class="moco-form-control" placeholder="请输入邮箱" required value="{{ eml }}">
-                {% endif %}
- 
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">个人简介</label>
-            <div class="col-sm-4">
-                <textarea class="moco-form-control" rows="3" name="jianjie">{{ jianjie }}</textarea>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-4">
-                <button type="submit" class="rlf-btn-green btn-block profile-btn" data-toggle="modal"
-                        data-target=".bs-example-modal-sm" hidefocus="true"  aria-role="button">保存
-                </button>
-                <a href="{% url 'sells:product_list' %}" class="btn btn-primary">返回主页</a>
-            </div>
-        </div>
-        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <hr>
-                    <div class="form-group has-success has-feedback">
-                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">性别</label>
+                                <div class="col-sm-4">
+                                    <select class="form-control" name="sex">
+                                        <option>男</option>
+                                        <option>女</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">年龄</label>
+                                <div class="col-sm-4">
+                                    {% if age == None %}
+
+                                        <input type="text" name="age" id="inputEmail3" autocomplete="off"
+                                               data-validate="require-nick" class="moco-form-control"
+                                               placeholder="请输入年龄" required value="">
+                                    {% else %}
+
+                                        <input type="text" name="age" id="inputEmail3" autocomplete="off"
+                                               data-validate="require-nick" class="moco-form-control"
+                                               placeholder="请输入年龄" required value="{{ age }}">
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">电话号码</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="tele" id="inputEmail3" autocomplete="off"
+                                           data-validate="require-nick" class="moco-form-control" placeholder="请输入电话"
+                                           required value="{{ tele }}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+                                <div class="col-sm-4">
+                                    {% if eml == None %}
+
+                                        <input type="text" name="eml" id="inputEmail3" autocomplete="off"
+                                               data-validate="require-nick" class="moco-form-control"
+                                               placeholder="请输入邮箱" required value="">
+                                    {% else %}
+
+                                        <input type="text" name="eml" id="inputEmail3" autocomplete="off"
+                                               data-validate="require-nick" class="moco-form-control"
+                                               placeholder="请输入邮箱" required value="{{ eml }}">
+                                    {% endif %}
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">个人简介</label>
+                                <div class="col-sm-4">
+                                    <textarea class="moco-form-control" rows="3" name="jianjie">{{ jianjie }}</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-4">
+                                    <button type="submit" class="rlf-btn-green btn-block profile-btn"
+                                            data-toggle="modal"
+                                            data-target=".bs-example-modal-sm" hidefocus="true" aria-role="button">保存
+                                    </button>
+                                    <a href="{% url 'sells:product_list' %}" class="btn btn-primary">返回主页</a>
+                                </div>
+                            </div>
+                            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+                                 aria-labelledby="mySmallModalLabel">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <hr>
+                                        <div class="form-group has-success has-feedback">
+                                            <span class="glyphicon glyphicon-ok form-control-feedback"
+                                                  aria-hidden="true"></span>
+                                        </div>
+                                        <h4>修改成功</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <h4>修改成功</h4>
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
+
 </body>
 </html>

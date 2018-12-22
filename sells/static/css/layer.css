@@ -1,9 +1,9 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textarea, p, blockquote, th, td, form {
+ody, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textarea, p, blockquote, th, td, form {
 	margin: 0;
 	padding: 0
 }
 *html {
-	background-image: url(about:blank);
+	/*background-image: url(about:blank);*/
 	background-attachment: fixed
 }
 .xubox_shade, .xubox_layer {
@@ -15,7 +15,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textar
 	left: 0;
 	width: 100%;
 	height: 100%;
-_height:expression(document.body.offsetHeight+"px")
+/*_height:expression(document.body.offsetHeight+"px")*/
 }
 .xubox_layer {
 	top: 150px;
@@ -44,7 +44,7 @@ _height:expression(document.body.offsetHeight+"px")
 	width:100%
 }
 .xubox_load {
-	background: url(default/xubox_loading0.gif) #fff center center no-repeat
+	/*background: url(default/xubox_loading0.gif) #fff center center no-repeat*/
 }
 .xubox_loading {
 	display: block;
@@ -54,7 +54,7 @@ _height:expression(document.body.offsetHeight+"px")
 	_float: none
 }
 .xulayer_png32 {
-	background: url(default/xubox_ico0.png) no-repeat
+	/*background: url(default/xubox_ico0.png) no-repeat*/
 }
 .xubox_moves {
 	border: 3px solid #333;
@@ -67,7 +67,7 @@ _height:expression(document.body.offsetHeight+"px")
 	height: 30px;
 	top: 52px;
 	left: 15px;
-	background: url(default/xubox_ico0.png) no-repeat
+	/*background: url(default/xubox_ico0.png) no-repeat*/
 }
 .xubox_text {
 	padding-left: 55px;
@@ -175,13 +175,13 @@ _height:expression(document.body.offsetHeight+"px")
 }
 .xubox_close1:hover {
 	background-position: -39px -253px;
-	_background-position: -51px -7px
+	/*_background-position: -51px -7px*/
 }
 .xubox_botton a {
 	position: absolute;
 	bottom: 10px;
 	left: 50%;
-	background: url(default/xubox_ico0.png) repeat;
+	/*background: url(default/xubox_ico0.png) repeat;*/
 	text-decoration: none;
 	color: #FFF;
 	font-size: 14px;

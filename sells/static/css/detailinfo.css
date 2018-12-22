@@ -160,7 +160,7 @@ img{border:0;}
 .operate{width:160px;margin:10px auto;position:relative;}
 .goods_type_list .operate .prize{color:#da260e; font-size:14px;} 
 .goods_type_list .operate .unit{color:#999;padding-left:5px;}
-.goods_type_list .operate .add_goods{display:inline-block;width:15px;height:15px;background:url(../images/shop_cart.png);position:absolute;right:0;top:3px;}
+.goods_type_list .operate .add_goods{display:inline-block;width:15px;height:15px;position:absolute;right:0;top:3px;}
 
 
 /* 分页样式 */
@@ -191,14 +191,13 @@ img{border:0;}
 	width:1200px;
 	background-color: white;
 	margin: 0 auto;
-	height:1300;
+	height: 1300px;
 	border:2px solid #FFA500;
 	border-radius:20px ;
 	color:#000000;
 }
 .lab
 {
-	font-family: "微软雅黑";
 	font-size:16px ;
 	margin-left:400px;
 	margin-bottom: 20px;
