@@ -59,6 +59,7 @@ def login(request):
         uf = UserForm()
     return render_to_response('login.html',{'uf':uf})
 
+
 def xinxi(request):
     username=request.user.username
     print(username)

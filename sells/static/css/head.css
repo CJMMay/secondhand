@@ -1,3 +1,7 @@
+body {
+    width: 1190px;
+    margin: auto;
+}
 #nav{
 	border-bottom:1px solid #dad9d7
 }
