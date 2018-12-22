@@ -1,73 +1,71 @@
 {% extends "sells/head.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>发布闲置</title>
-	</head>
-	<body id="body1">
-		{% block content %}
-		<link rel="stylesheet" href={% static "css/detailinfo.css" %} />
-		<div style="text-align: center;height:50px;line-height:50px;">
-			<span style="font-family: '微软雅黑';font-size: 24px;color: #000000;">商品的基本信息</span>
-			<span style="font-size: 16px;margin-left: 5px;color: red;">带*为必填信息</span>
-		</div>
-		<div class="center_content">
-			<form class="fo" method="post" action="{% url 'sells:do_publish' %}" enctype="multipart/form-data">
-				 {% csrf_token %}    
-				<label class="lab">标题</label>
-		        <input class="shuru" id="biaoti" name='name' required/><span style="color: red;margin-left: 5px;">*</span>
-		         <br />
-		         <br />
-				<label class="lab">详情</label>
-		        <textarea class="shuru" id="xiangqing" name='description'>描述物品的详细信息，入手渠道，转手原因和使用感受</textarea>	
-		         <br />
-		         <br />	       
-				<span style="font-family: '微软雅黑'; font-size: 16px; margin-left: 400px;margin-bottom: 20px;display:inline-block">封面</span>
-              <input type="button" style="border:1px solid #D2D2D2;width:80px;height:35px;font-size:16px;background-color:#FAF8F8;margin-left:10px;" value='上传照片'onclick="document.getElementById('fileField').click()" />
-              <span style="color: red;margin-left: 5px;">*</span>
-              <input  type="file" name="img" id="fileField"class="file" size="28" onchange="document.getElementById('textfield').value=this.value" />
+{% block title %}
+    发布闲置
+{% endblock %}
+{% block content %}
+    <link rel="stylesheet" href={% static "css/detailinfo.css" %}/>
+    <div style="text-align: center;height:50px;line-height:50px;">
+        <span style="font-family: '微软雅黑';font-size: 24px;color: #000000;">商品的基本信息</span>
+        <span style="font-size: 16px;margin-left: 5px;color: red;">带*为必填信息</span>
+    </div>
+    <div class="center_content">
+        <form class="fo" method="post" action="{% url 'sells:do_publish' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label class="lab">标题</label>
+            <input class="shuru" id="biaoti" name='name' required/><span style="color: red;margin-left: 5px;">*</span>
+            <br/>
+            <br/>
+            <label class="lab">详情</label>
+            <textarea class="shuru" id="xiangqing" name='description'>描述物品的详细信息，入手渠道，转手原因和使用感受</textarea>
+            <br/>
+            <br/>
+            <span style="font-family: '微软雅黑'; font-size: 16px; margin-left: 400px;margin-bottom: 20px;display:inline-block">封面</span>
+            <input type="button"
+                   style="border:1px solid #D2D2D2;width:80px;height:35px;font-size:16px;background-color:#FAF8F8;margin-left:10px;"
+                   value='上传照片' onclick="document.getElementById('fileField').click()"/>
+            <span style="color: red;margin-left: 5px;">*</span>
+            <input type="file" name="img" id="fileField" class="file" size="28"
+                   onchange="document.getElementById('textfield').value=this.value"/>
 
-             <br />
-				<br />
-				<label class="lab">成色</label>
-		        <input class="shuru" id="chengse" name='gold' required/><span style="color: red;margin-left: 5px;">*</span>
-		         <br />
-		        <br />
-		        <br />
-		        <label class="lab">分类</label>
-				 <select style="border:1px solid #D2D2D2;width:250px ;height: 35px;font-family:'微软雅黑';margin-left: 10px;" name='category'>
-                    <option value="1">学习用品</option>
-                    <option value="2">生活用品</option>
-                    <option value="3">美妆护肤</option>
-                    <option value="4">鞋服配饰</option>
-                    <option value="5">交通工具</option>
-                    <option value="6">数码产品</option>
-				</select>
-				<br />
-				<br />
-				<label class="lab">价格</label>
-		        <input class="shuru" id="jiage" name='price' required/><span style="color: red;margin-left: 5px;">*</span>
-		         <br />            
-	           <br/>
-	           <br/>
-		        <label class="lab">电话</label>
-		        <input class="shuru" id="dianhua" name='tel' required/><span style="color: red;margin-left: 5px;">*</span>
-		         <br />
-		         <br />
-		         <br />
-		        <label class="lab">标签</label>
-				<select style="border:1px solid #E5E5E5;width:250px ;height: 35px;font-family:'微软雅黑';margin-left: 10px;">
-					<option value="英语">英语</option>
-                    <option value="考试">考试</option>
-                    <option value="词汇">词汇</option>
-				</select>
-				<div style="width:1200px; height:100px;text-align:center">
-					<button type="submit" class="bt">确认发布</button>
-				</div>
-		</form>
-		</div>
-	{% endblock %}
-	</body>
-</html>
+            <br/>
+            <br/>
+            <label class="lab">成色</label>
+            <input class="shuru" id="chengse" name='gold' required/><span style="color: red;margin-left: 5px;">*</span>
+            <br/>
+            <br/>
+            <br/>
+            <label class="lab">分类</label>
+            <select style="border:1px solid #D2D2D2;width:250px ;height: 35px;font-family:'微软雅黑';margin-left: 10px;"
+                    name='category'>
+                <option value="1">学习用品</option>
+                <option value="2">生活用品</option>
+                <option value="3">美妆护肤</option>
+                <option value="4">鞋服配饰</option>
+                <option value="5">交通工具</option>
+                <option value="6">数码产品</option>
+            </select>
+            <br/>
+            <br/>
+            <label class="lab">价格</label>
+            <input class="shuru" id="jiage" name='price' required/><span style="color: red;margin-left: 5px;">*</span>
+            <br/>
+            <br/>
+            <br/>
+            <label class="lab">电话</label>
+            <input class="shuru" id="dianhua" name='tel' required/><span style="color: red;margin-left: 5px;">*</span>
+            <br/>
+            <br/>
+            <br/>
+            <label class="lab">标签</label>
+            <select style="border:1px solid #E5E5E5;width:250px ;height: 35px;font-family:'微软雅黑';margin-left: 10px;">
+                <option value="英语">英语</option>
+                <option value="考试">考试</option>
+                <option value="词汇">词汇</option>
+            </select>
+            <div style="width:1200px; height:100px;text-align:center">
+                <button type="submit" class="bt">确认发布</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
