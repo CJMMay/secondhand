@@ -60,3 +60,12 @@ def do_publish(request):
 
 # def index(request):
 #     return render(request, 'sells/product/home.html')
+
+def showmypublish(request):
+    stuid=request.session['stuid']
+    #users=User.objects.filter(stuid=stuid)
+    #username=users.username
+    #tele=users.tele
+    products = Product.objects.filter(stuid=stuid)
+    return render(request, 'showmypublish.html',
+                  {'products': products})

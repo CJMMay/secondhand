@@ -1,17 +1,14 @@
-{% extends 'sells/head.html' %}
+{% extends "sells/head.html" %}
 {% load static %}
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-
+	<meta charset="utf-8">
+    <title></title>
 </head>
 <body>
-{% block content %}
-
-<link rel="stylesheet" href="{% static "/css/collection.css"%}">
-<link rel="stylesheet" href={% static "/css/showmypublish.css" %} />
+    {% block content %}
+    <link rel="stylesheet" href={% static "css/showmypublish.css" %} />
     	<div class="taitou">
     	</div>
     	<div class="daohang">
@@ -39,9 +36,8 @@
     		</ul>
     	</div>
     	<div class="main_content">
-    		<p style="font-size: 20px;font-family:'agency fb';margin-top: 30px;margin-left: 30px;color: #FFA500;"><strong>我的收藏</strong></p>
-    	{% for item in cart %}
-            {% with product=item.product %}
+    		<p style="font-size: 20px;font-family:'agency fb';margin-top: 30px;margin-left: 30px;color: #FFA500;"><strong>我的发布</strong></p>
+    	{% for product in products %}
     		<div class="publish_content">
     			<div class="product_image">
     				<a href="{{ product.get_absolute_url }}"><img style="width:95px;height:145px" src="
@@ -53,12 +49,14 @@
     				    <p style="color: #FFA500;font-size:18px;">￥{{ product.price }}</p>
     				    <p>{{ product.category }}</p>
     				</div>
-    				<a href="{% url 'cart:cart_remove' product.id %}"><span style="color: #FFA500;margin-left: 600px;margin-top: 50px;display: inline-block;">移除收藏</span></a>
+    				<span style="color: #FFA500;margin-left: 600px;margin-top: 50px;display: inline-block;">待售出</span>
     			</div>
+    			<div class="product_edit">
+    				<span style="margin-left: 700px;margin-bottom: 10px;">修改信息&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;删除信息&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;付费推广</span>
+              </div>
     		</div>
-    		{% endwith %}
     		{% endfor %}
     	</div>
-{% endblock %}
+    	 {% endblock %}
 </body>
 </html>
