@@ -1,7 +1,7 @@
 {% extends "sells/head.html" %}
 {% load static %}
 {% block title %}
-   {{ product.name }}
+    {{ product.name }}
 {% endblock %}
 {% block content %}
     <link rel="stylesheet" href="{% static "css/iconfont/iconfont.css" %}">
@@ -26,15 +26,13 @@
             </div>
             <div class="btn">
                 <ul>
-                  <form action="{% url 'cart:cart_add' product.id %}" method="post">
-    {{ cart_product_form }}
-    {% csrf_token %}
-                    <li><a class="buy_btn" href="">立即购买</a></li>
-               <input type="submit" value="收藏" class="col" href="#">
-  
- 
-    </form>
-    
+                    <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                        {{ cart_product_form }}
+                        {% csrf_token %}
+
+                        <input type="submit" value="收藏" class="col" href="#">
+                    </form>
+                    <li><a class="buy_btn" href="{% url 'orders:order_create' product.id %}">立即购买</a></li>
                     <li><a class="col" href="#">分享</a></li>
                     <div style="clear: both"></div>
                 </ul>

@@ -1,0 +1,61 @@
+h2{
+    text-align: center;
+}
+.order-info{
+    border: solid 1px #dad9d7;
+    padding-top:15px ;
+}
+.product_image{
+    margin-left: 20px;
+    height:120px;
+    width: 120px;
+    float: left;
+}
+.product_descript{
+    float: left;
+    height: 110px;
+    width: 800px;
+}
+.product_descript h3{
+    margin-top: 0px;
+}
+.product_descript p{
+    font-size: 10px;
+    color:grey;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.price{
+    float: left;
+}
+.order-form{
+    clear: both;
+}
+.order-form p{
+    font-size: 12px;
+    color: grey;
+}
+.order-form label{
+    font-size: 15px;
+    color: #2a2c2e;
+}
+#id_address{
+    height: 25px;
+    width: 300px;
+}
+.errorlist{
+    color: red;
+    font-size: 10px;
+}
+.btn{
+    width: 80px;
+    height: 40px;
+    background-color:rgb(255, 221, 62) ;
+    color: white;
+    font-size: larger;
+    font-weight: 400;
+}
+
+.order-form p{
+  text-align: center;
+}

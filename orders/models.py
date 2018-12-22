@@ -5,12 +5,13 @@ from sells.models import Product
 from login_res.models import User
 
 class Order(models.Model):
-    sell_stuid= models.ForeignKey(User, on_delete=models.CASCADE)
-    stuid = models.ForeignKey(User, on_delete=models.CASCADE)
+    stuid = models.ForeignKey(User, related_name="buyer",on_delete=models.CASCADE)
+
     address = models.CharField(max_length=250)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
+    finished=models.BooleanField(default=False)
 
     class Meta:
         ordering = ('-created',)

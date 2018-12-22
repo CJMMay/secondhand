@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('login_res.urls', namespace='login_res')),
     path('cart/', include('cart.urls', namespace='cart')),
     path('sells/', include('sells.urls', namespace='sells')),
+    path('orders/', include('orders.urls', namespace='orders')),
     re_path(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)

@@ -1,0 +1,37 @@
+{% extends 'sells/head.html' %}
+{% load staticfiles %}
+{% block title %}
+    下单
+{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static "css/order_create.css" %}">
+    <h2>确认订单信息</h2>
+    <div class="order-info">
+        <div class="product_image">
+            <a href="{{ product.get_absolute_url }}"><img style="width:100px;height:100px" src="
+                    {% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"/></a>
+        </div>
+        <div class="product_descript">
+            <div>
+                <h3>{{ product.name }}</h3>
+
+                <p>{{ product.category }}</p>
+                <p>出售者：{{ product.stuid }}</p>
+            </div>
+        </div>
+        <div class="price">
+                <p style="color: #FFA500;font-size:18px;">￥{{ product.price }}</p>
+        </div>
+    <div style="clear: both"></div>
+    </div>
+    <div class="order_form">
+        <form action="." method="post" class="order-form" novalidate>
+             <p>*填写双方交换物品的地址（仅限校内）</p>
+            {{ form.as_p }}
+            <p><input type="submit" value="去支付" class="btn"></p>
+            {% csrf_token %}
+        </form>
+    </div>
+
+{% endblock %}
