@@ -61,12 +61,13 @@ def login(request):
 
 
 def xinxi(request):
-    username=request.user.username
-    print(username)
-    lists=User.objects.get(username=username)
+    stuid=request.session['stuid']
+    print(stuid)
+    lists=User.objects.get(stuid=stuid)
     print(lists)
     con={
         "list":lists,
+        "stuid":lists.stuid,
         "username":lists.username,
         "sex":lists.sex,
         "age":lists.age,
@@ -78,16 +79,17 @@ def xinxi(request):
  
 #保存个人信息
 def do_xinxi(request):
+    stuid=request.POST.get('stuid')
     username=request.POST.get('username')
     sex=request.POST.get('sex')
     age=request.POST.get('age')
     tele=request.POST.get('tele')
     eml=request.POST.get('eml')
     jianjie=request.POST.get('jianjie')
-    res=User.objects.filter(username=username).update(sex=sex,age=age,tele=tele,eml=eml,jianjie=jianjie)
+    res=User.objects.filter(stuid=stuid).update(username=username,sex=sex,age=age,tele=tele,eml=eml,jianjie=jianjie)
     if res:
         con={
-            'username': request.POST.get('username'),
+            
             'suss':'修改成功'
         }
         # return render(request,'login_res/xinxi.html')
