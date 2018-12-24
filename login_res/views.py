@@ -62,9 +62,7 @@ def login(request):
 
 def xinxi(request):
     stuid=request.session['stuid']
-    print(stuid)
     lists=User.objects.get(stuid=stuid)
-    print(lists)
     con={
         "list":lists,
         "stuid":lists.stuid,

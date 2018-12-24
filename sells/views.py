@@ -12,7 +12,7 @@ def product_list(request, category_slug=None):
     category=None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
-    new_products=Product.objects.order_by('-created')
+    new_products=Product.objects.filter(available=True).order_by('-created')
     new_products=new_products[:4]
     if category_slug:
         category = get_object_or_404(categories, slug=category_slug)

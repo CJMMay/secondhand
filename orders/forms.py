@@ -9,3 +9,7 @@ class OrderCreateForm(forms.ModelForm):
 
         fields = ['address','stuid']
 
+class OrderTransForm(forms.ModelForm):
+    class Meta:
+        model=Order
+        fields=['finished','paid']

@@ -6,5 +6,15 @@
 
 {% block content %}
     <p>Your order has been successfully created. Your order number is <strong>{{ order.id }}</strong>.</p>
-    
+    <p>交易地点：{{ order.address }}</p>
+    <p>是否收到货：{{ order.paid }}</p>
+    <p>是否付款：{{ order.paid }}</p>
+    <div class="order_form">
+        <form action="." method="post" class="order-form" novalidate>
+             <p>*填写是否收到货以及是否付款</p>
+            {{ form.as_p }}
+            <p><input type="submit" value="交易成功" class="btn"></p>
+            {% csrf_token %}
+        </form>
+    </div>
 {% endblock %}
