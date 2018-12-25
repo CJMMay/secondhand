@@ -26,14 +26,14 @@
             </div>
             <div class="btn">
                 <ul>
+                    <li><a class="buy_btn" href="{% url 'orders:order_create' product.id %}">立即购买</a></li>
+                    <li><a class="col" href="#">分享</a></li>
                     <form action="{% url 'cart:cart_add' product.id %}" method="post">
                         {{ cart_product_form }}
                         {% csrf_token %}
-
-                        <input type="submit" value="收藏" class="col" href="#">
+                        <li><input type="submit" value="收藏" class="col" href="#"></li>
                     </form>
-                    <li><a class="buy_btn" href="{% url 'orders:order_create' product.id %}">立即购买</a></li>
-                    <li><a class="col" href="#">分享</a></li>
+
                     <div style="clear: both"></div>
                 </ul>
                 <div style="clear: both"></div>

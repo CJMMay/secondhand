@@ -74,6 +74,7 @@ body {
 
 .btn ul {
 	padding: 1px;
+	width: 200px;
 }
 
 .btn ul li {
@@ -91,7 +92,10 @@ body {
 	text-decoration: none;
 	color: rgb(255, 152, 0);
 }
-
+input{
+	background-color: transparent;
+	font-size: medium;
+}
 .other {
 	float: right;
 	margin-right: 0;
