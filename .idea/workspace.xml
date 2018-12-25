@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="45b85e9d-94c6-4ef4-97e1-53921891e441" name="默认的" comment="默认的">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sells/static/css/detailinfo.css" afterPath="$PROJECT_DIR$/sells/static/css/detailinfo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sells/templates/publish.html" afterPath="$PROJECT_DIR$/sells/templates/publish.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sells/static/css/showmypublish.css" afterPath="$PROJECT_DIR$/sells/static/css/showmypublish.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sells/templates/showmypublish.html" afterPath="$PROJECT_DIR$/sells/templates/showmypublish.html" />
     </list>
     <ignored path="secondhand.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +43,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="detailinfo.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="detailinfo.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sells/static/css/detailinfo.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="151" column="16" lean-forward="false" selection-start-line="151" selection-start-column="16" selection-end-line="151" selection-end-column="16" />
+                <state relative-caret-position="159">
+                  <caret line="147" column="8" lean-forward="false" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="showmypublish.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sells/static/css/showmypublish.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -67,12 +77,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="publish.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="publish.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sells/templates/publish.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+                <state relative-caret-position="240">
+                  <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
                   <folding>
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#form#0;n#div#1;n#!!top" expanded="true" />
@@ -83,6 +94,41 @@
                     <element signature="n#style#0;n#div#6;n#form#0;n#div#1;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#7;n#form#0;n#div#1;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#8;n#form#0;n#div#1;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="showmypublish.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sells/templates/showmypublish.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+                  <folding>
+                    <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="e#2025#2031#0#HTML" expanded="true" />
+                    <element signature="e#2031#2037#0#HTML" expanded="true" />
+                    <element signature="e#2037#2043#0#HTML" expanded="true" />
+                    <element signature="e#2043#2049#0#HTML" expanded="true" />
+                    <element signature="e#2050#2056#0#HTML" expanded="true" />
+                    <element signature="e#2056#2062#0#HTML" expanded="true" />
+                    <element signature="e#2062#2068#0#HTML" expanded="true" />
+                    <element signature="e#2068#2074#0#HTML" expanded="true" />
+                    <element signature="e#2078#2084#0#HTML" expanded="true" />
+                    <element signature="e#2084#2090#0#HTML" expanded="true" />
+                    <element signature="e#2090#2096#0#HTML" expanded="true" />
+                    <element signature="e#2096#2102#0#HTML" expanded="true" />
+                    <element signature="e#2103#2109#0#HTML" expanded="true" />
+                    <element signature="e#2109#2115#0#HTML" expanded="true" />
+                    <element signature="e#2115#2121#0#HTML" expanded="true" />
+                    <element signature="e#2121#2127#0#HTML" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -127,6 +173,7 @@
       <find>.ico</find>
       <find>./favicon.ico</find>
       <find>/favicon.ico</find>
+      <find>button</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,6 +234,8 @@
         <option value="$PROJECT_DIR$/sells/static/css/good_info.css" />
         <option value="$PROJECT_DIR$/sells/templates/publish.html" />
         <option value="$PROJECT_DIR$/sells/static/css/detailinfo.css" />
+        <option value="$PROJECT_DIR$/sells/templates/showmypublish.html" />
+        <option value="$PROJECT_DIR$/sells/static/css/showmypublish.css" />
       </list>
     </option>
   </component>
@@ -276,7 +325,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="login_res" />
+              <option name="myItemId" value="sells" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secondhand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secondhand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sells" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secondhand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secondhand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sells" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secondhand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="secondhand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sells" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,10 +398,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="login_res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -720,7 +823,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17057101" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -803,13 +906,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sells/templates/Personal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sells/templates/sells/product/list.html" />
     <entry file="file://$PROJECT_DIR$/sells/templates/sells/head.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1051,6 +1147,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,14 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sells/templates/showmypublish.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,19 +1227,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sells/static/css/detailinfo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="151" column="16" lean-forward="false" selection-start-line="151" selection-start-column="16" selection-end-line="151" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sells/templates/publish.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="240">
+          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#form#0;n#div#1;n#!!top" expanded="true" />
@@ -1161,6 +1243,55 @@
             <element signature="n#style#0;n#div#6;n#form#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#7;n#form#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#8;n#form#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sells/static/css/detailinfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="147" column="8" lean-forward="false" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sells/static/css/showmypublish.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sells/templates/showmypublish.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2025#2031#0#HTML" expanded="true" />
+            <element signature="e#2031#2037#0#HTML" expanded="true" />
+            <element signature="e#2037#2043#0#HTML" expanded="true" />
+            <element signature="e#2043#2049#0#HTML" expanded="true" />
+            <element signature="e#2050#2056#0#HTML" expanded="true" />
+            <element signature="e#2056#2062#0#HTML" expanded="true" />
+            <element signature="e#2062#2068#0#HTML" expanded="true" />
+            <element signature="e#2068#2074#0#HTML" expanded="true" />
+            <element signature="e#2078#2084#0#HTML" expanded="true" />
+            <element signature="e#2084#2090#0#HTML" expanded="true" />
+            <element signature="e#2090#2096#0#HTML" expanded="true" />
+            <element signature="e#2096#2102#0#HTML" expanded="true" />
+            <element signature="e#2103#2109#0#HTML" expanded="true" />
+            <element signature="e#2109#2115#0#HTML" expanded="true" />
+            <element signature="e#2115#2121#0#HTML" expanded="true" />
+            <element signature="e#2121#2127#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
