@@ -20,7 +20,6 @@
             <div style="width:320px;margin: auto;">
 
             <label class="lab">详情</label>
-                <br/>
             <textarea class="shuru" id="xiangqing" name='description'>描述物品的详细信息，入手渠道，转手原因和使用感受</textarea>
              </div>
               <div style="width:320px;margin: auto;">
@@ -29,8 +28,9 @@
                    style="border:1px solid #D2D2D2;width:80px;height:35px;font-size:16px;background-color:#FAF8F8;margin-left:10px;"
                    value='上传照片' onclick="document.getElementById('fileField').click()"/>
             <span style="color: red;margin-left: 5px;">*</span>
-            <input type="file" name="img" id="fileField" class="file" size="28"
+            <input type="file" name="img" id="fileField" class="file"
                    onchange="document.getElementById('textfield').value=this.value"/>
+                   <br/>
   </div>
             <div style="width:320px;margin: auto;">
             <label class="lab">成色</label>
