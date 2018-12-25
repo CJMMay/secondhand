@@ -1,16 +1,15 @@
 /*我发布的样式*/
-/*.taitou*/
-/*{*/
-	/*margin-top: 10px;*/
-	/*margin-left: 10px;*/
-	/*width:1190px;*/
-	/*height: 150px;*/
-	/*background-color: white;*/
-	/*background-image: url(../../../static/img/taitou.png);*/
-	/*background-repeat:no-repeat;*/
-	/*background-size: 100% 100%; !*让背景图片铺满整个背景*!*/
-	/*border-radius: 5px;*/
-/*}*/
+.taitou
+{
+	margin:10px auto;
+	width:1000px;
+	height: 150px;
+	background-color: white;
+	background-image: url(../../../static/img/taitou.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%; /*让背景图片铺满整个背景*/
+	border-radius: 5px;
+}
 /*.zhanghao
 {
 	width: 1000px;
@@ -21,7 +20,7 @@
 .zhanghao h1{color: white;margin-left:10px;margin-top:10px}
 .zhanghao p{color:  white;margin-left:10px;margin-top:10px}*/
 .cont{
-	width: 1190;
+	width: 1190px;
 	margin:auto;
 
 }
