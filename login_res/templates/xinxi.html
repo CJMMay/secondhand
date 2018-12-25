@@ -1,19 +1,15 @@
 {% extends "sells/head.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title></title>
-</head>
-<body style="margin: 0;padding: 0;">
+{%block title%}
+    个人中心
+{% endblock %}
     {% block content %}
     <link rel="stylesheet" href={% static "css/showmypublish.css" %} />
     <link rel="stylesheet" href={% static "css/moco.min.css" %} />
     <link rel="stylesheet" href={% static "css/profile-less.css" %} />
         <div class="taitou">
         </div>
-        <div class="daohang">
+        <div class="daohang1">
             <h2 style="margin-left: 20px;margin-top: 10px;">个人中心</h2>
             <hr style="width: 100px;border:1px solid #DEDEDE;padding: 0;margin-left: 20px;" />
             <ul class="list">
@@ -164,6 +160,5 @@
                     </div>
                   </div>
               </div>
+         </div>
 {% endblock %}
-</body>
-</html>
