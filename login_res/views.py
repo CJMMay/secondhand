@@ -36,7 +36,7 @@ def do_res(request):
         return render(request, 'res.html', con)
 
 
-
+#登录注册
 class UserForm(forms.Form):
     stuid = forms.CharField(label = '账号 :',max_length = 15)
     password = forms.CharField(label = '密码 :',widget = forms.PasswordInput())
@@ -59,7 +59,7 @@ def login(request):
         uf = UserForm()
     return render_to_response('login.html',{'uf':uf})
 
-
+#个人信息
 def xinxi(request):
     stuid=request.session['stuid']
     lists=User.objects.get(stuid=stuid)
